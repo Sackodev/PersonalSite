@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+  <!--Bootstrap stuff -->
+  <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <strong>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></strong>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="scanlineGraphic"></div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="titleBox">
+          <div id="titleText">
+            Zach Adkins<br>
+            <span>Aspiring programmer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="searchForm" action="#">
+          <span id="searchTri">><input id="searchInput" type="text" name="searchItem"></span>
+          <button id="searchButton" type="button">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2 col-md-3 col-lg-4 hidden-xs"></div>
+      <div id="socMedia" class="col-xs-12 col-sm-8 col-md-6 col-lg-4 cornerBox">
+        <div class="top left"></div>
+				<div class="top right"></div>
+				<div class="bottom left"></div>
+				<div class="bottom right"></div>
+        <div class="socIcon"><a href="#"><img alt="GitHub Link" src="static/img/github-icon.png"></a></div>
+        <div class="socIcon"><a href="#"><img alt="Twitter Link" src="static/img/twitter-icon.png"></a></div>
+      </div>
+      <div class="col-sm-2 col-md-3 col-lg-4 hidden-xs"></div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-12" id="footer">
+        Created by Zachary Adkins<br>
+        Contact at adkinsz1@ferris.edu
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  $(document).ready(function() {
+    $("#searchButton").click(function() {
+      loadContent();
+    });
+    $("#searchInput").on('keyup', function(e) {
+      if (e.keyCode == 13) {
+        loadContent();
+      }
+    });
+
+    function loadContent() {
+      console.log("Activated!");
+      var searchText = $("#searchInput").val().toLowerCase();
+      if (searchText == "oof") {
+        $("#contentHome").addClass("hideContent");
+        $("#contentOof").removeClass("hideContent");
+      } else if (searchText == "home") {
+        $("#contentHome").removeClass("hideContent");
+        $("#contentOof").addClass("hideContent");
+      }
+    }
+
+  });
+</script>
+
+</html>

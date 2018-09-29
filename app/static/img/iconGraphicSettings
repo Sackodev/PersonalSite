@@ -1,0 +1,3 @@
+color: 00ff00 (change picture into solid color if not already, then paint bucket it)
+change size to 64 * 64 px
+Filters > Noise > Spread 3px

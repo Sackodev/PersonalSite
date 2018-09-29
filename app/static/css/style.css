@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Peepo';
+    src: url('Peepo.woff');
+}
+/* Extra small devices */
+@media (max-width: 767px) {
+    .contentImg {
+        margin-bottom: 25px;
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1600px) {
+  .container{
+    max-width: 1570px; /* or 950px */
+  }
+}
+
+html {
+  position: relative;
+  /* forces height to be at least as big as the viewport*/
+  min-height: 100%;
+}
+* {
+  background-color: transparent;
+  color: #00ff00;
+  font-family: 'Peepo';
+}
+body {
+  font-family: 'Peepo';
+  height: 100%;
+}
+.wrapper{
+}
+
+#scanlineGraphic {
+  position: absolute;
+  pointer-events: none;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  background: url('../../static/img/scanline.png');
+  background-repeat: repeat-y;
+  background-position: center;
+  background-color: black !important;
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+#content{
+}
+#searchForm {
+  text-align: center;
+  padding-bottom: 30px;
+}
+#searchForm span{
+  border: 1px solid #00ff00;
+}
+#searchInput {
+  border: 0px;
+  padding-left: 5px;
+}
+#searchButton{
+  border: 1px solid #00ff00;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+}
+/*
+*[class^='col-']{
+}
+*/
+.sizepic {
+  max-width:100%;
+  border: 2px solid #00ff00;
+}
+.picBox {
+  padding-left: 0px;
+  padding-right: 15px;
+}
+#footer {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#titleBox {
+  padding-top: 30px;
+  padding-bottom: 23px;
+  font-weight: bold;
+  font-family: 'Peepo';
+  text-align: center;
+  line-height: 45px;
+  background-color: transparent !important;
+}
+#titleText {
+  background-color: transparent !important;
+  font-size: 50px;
+}
+#titleText span{
+  font-size: 20px;
+  font-weight: normal;
+}
+.cornerBox {
+  position: relative;
+  border-left: 2px solid #00ff00;
+  border-right: 2px solid #00ff00;
+  padding: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.top, .bottom {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  background-color: transparent !important;
+}
+.top {
+  top: 0;
+  border-top: 2px solid #00ff00;
+}
+
+.bottom {
+  bottom: 0;
+  border-bottom: 2px solid #00ff00;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.hideContent {
+  display: none;
+}
+
+.showContent {
+  display: block;
+}
+
+#searchTri {
+    padding-left: 8px;
+}
+
+.row {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#socMedia {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.socIcon {
+  display: inline-block;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.socIcon img{
+  width: 48px;
+}
