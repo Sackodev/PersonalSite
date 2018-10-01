@@ -2,3 +2,4 @@ bin/
 include/
 lib/
 ZachSite/
+pip-selfcheck.json
