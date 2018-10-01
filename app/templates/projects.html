@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div id="projContent">
+            <div class="row">
+                <div class="col-sm-12 blah">
+                    <div id="projListCont" class="cornerBox">
+                        <div class="top left"></div>
+			            <div class="top right"></div>
+			            <div class="bottom left"></div>
+			            <div class="bottom right"></div>
+                        <h3>PROJECTS</h3>
+                        <table id="projList">
+                        <tbody>
+                            {% for row in rows %}
+                            <tr class="projItem">
+                                <td>
+                                    <div class="projImg"></div>
+                                </td>
+                                <td class="projInfo">
+                                    <h4 class="projName">{{row["projname"]}}</h4>
+                                    <div class="desc">{{row["desc"]}}</div>
+                                    <div class="link"><a href="{{row['link']}}">--> Project Link <--</a></div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

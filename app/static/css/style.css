@@ -6,8 +6,15 @@
 @media (max-width: 767px) {
     .contentImg {
         margin-bottom: 25px;
-        width: 70%;
-        margin-left: 15%;
+    }
+    .projItem div{
+        font-size: 12px;
+    }
+    .projItem h4{
+        font-size: 18px;
+    }
+    #projListCont {
+        padding: 15px;
     }
 }
 /* Small devices (tablets, 768px and up) */
@@ -23,7 +30,7 @@
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1600px) {
   .container{
-    max-width: 1570px; /* or 950px */
+    max-width: 1600px;
   }
 }
 
@@ -40,6 +47,7 @@ html {
 body {
   font-family: 'Peepo';
   height: 100%;
+  background: black;
 }
 .wrapper{
 }
@@ -64,6 +72,7 @@ body {
 #searchForm {
   text-align: center;
   padding-bottom: 30px;
+  position: relative;
 }
 #searchForm span{
   border: 1px solid #00ff00;
@@ -71,13 +80,13 @@ body {
 #searchInput {
   border: 0px;
   padding-left: 5px;
+  width: 170px;
 }
 #searchButton{
   border: 1px solid #00ff00;
 }
 .container {
-  margin-right: auto;
-  margin-left: auto;
+
 }
 .row {
 }
@@ -156,7 +165,7 @@ body {
   display: block;
 }
 
-#searchTri {
+#searchBox {
     padding-left: 8px;
 }
 
@@ -179,4 +188,56 @@ body {
 
 .socIcon img{
   width: 48px;
+}
+
+#projListCont {
+    max-width: 1500px;
+    display: inline-block;
+    margin: 0px auto 10px auto;
+    text-align: left;
+}
+
+#projList {
+    margin: 0 auto;
+    display: inline-block;
+}
+.projItem {
+    display: block;
+    margin: 0px 0px 15px 0px;
+}
+.projImg {
+    height: 150px;
+    width: 150px;
+    border: 2px solid #00ff00;
+}
+.projInfo {
+    padding-left: 30px;
+}
+#projContent {
+    text-align: center;
+}
+#projListCont h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#projListCont h4{
+    margin-bottom: 5px;
+}
+a {
+    margin: 0 auto;
+    color: #00ff00;
+}
+a:hover {
+    color: #00ff00;
+}
+.projInfo .link {
+    margin-top: 10px;
+}
+#titleText a:hover {
+    text-decoration: none;
+}
+
+#searchHint {
+    font-size: 12px;
+    margin-top: 3px;
 }

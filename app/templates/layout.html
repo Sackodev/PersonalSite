@@ -14,11 +14,12 @@
 <body>
   <div class="wrapper">
     <div id="scanlineGraphic"></div>
+    <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div id="titleBox">
           <div id="titleText">
-            Zach Adkins<br>
+            <a href="{{ url_for('home') }}">Zach Adkins</a><br>
             <span>Aspiring programmer</span>
           </div>
         </div>
@@ -27,8 +28,9 @@
     <div class="row">
       <div class="col-sm-12">
         <div id="searchForm" action="#">
-          <span id="searchTri">><input id="searchInput" type="text" name="searchItem"></span>
+          <span id="searchBox">><input id="searchInput" type="text" name="searchItem"></span>
           <button id="searchButton" type="button">Submit</button>
+          <div id="searchHint">Hint: Type 'home', 'projects', or 'resume' in above search box</div>
         </div>
       </div>
     </div>
@@ -51,6 +53,7 @@
       </div>
     </div>
   </div>
+</div>
 </body>
 
 <script>
@@ -65,17 +68,11 @@
     });
 
     function loadContent() {
-      console.log("Activated!");
       var searchText = $("#searchInput").val().toLowerCase();
-      if (searchText == "oof") {
-        $("#contentHome").addClass("hideContent");
-        $("#contentOof").removeClass("hideContent");
-      } else if (searchText == "home") {
-        $("#contentHome").removeClass("hideContent");
-        $("#contentOof").addClass("hideContent");
+      if (searchText == "projects" || searchText == "home") {
+        $('body').load('/background_process_test', {"searchText": searchText});
       }
     }
-
   });
 </script>
 
