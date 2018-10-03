@@ -7,6 +7,9 @@
     .contentImg {
         margin-bottom: 25px;
     }
+    .picBox {
+      padding-right: 0px;
+    }
     .projItem div{
         font-size: 12px;
     }
@@ -19,18 +22,31 @@
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
-
+  .picBox {
+    padding-right: 15px;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
-
+  .picBox {
+    padding-right: 15px;
+  }
+  #projListCont{
+    min-width: 900px;
+  }
 }
 
-/* Large devices (large desktops, 1200px and up) */
+/* Large devices (large desktops, 1600px and up) */
 @media (min-width: 1600px) {
   .container{
     max-width: 1600px;
+  }
+  .picBox {
+    padding-right: 15px;
+  }
+  #projListCont{
+    min-width: 900px;
   }
 }
 
@@ -100,7 +116,6 @@ body {
 }
 .picBox {
   padding-left: 0px;
-  padding-right: 15px;
 }
 #footer {
   text-align: center;
@@ -191,7 +206,7 @@ body {
 }
 
 #projListCont {
-    max-width: 1500px;
+    max-width: 1600px;
     display: inline-block;
     margin: 0px auto 10px auto;
     text-align: left;

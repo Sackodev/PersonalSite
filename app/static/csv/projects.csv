@@ -1,0 +1,2 @@
+"Personal Site","This website! My first experience in using Flask.","https://github.com/Wocuangle/PersonalSite",""
+"File Dupe Remover","A program that detects duplicates in a folder. It uses MD5 hashes as well as file sizes to detect the duplicates. Any files you choose to delete are saved in a backup folder so you don't have to worry!","https://github.com/Wocuangle/FileDupeRemover",""

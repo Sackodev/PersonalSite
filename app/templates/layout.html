@@ -19,7 +19,7 @@
       <div class="col-sm-12">
         <div id="titleBox">
           <div id="titleText">
-            <a href="{{ url_for('home') }}">Zach Adkins</a><br>
+            <a href="#" id="title">Zach Adkins</a><br>
             <span>Aspiring programmer</span>
           </div>
         </div>
@@ -58,19 +58,25 @@
 
 <script>
   $(document).ready(function() {
+    $("#searchInput").focus();
     $("#searchButton").click(function() {
-      loadContent();
+      loadContent($("#searchInput").val().toLowerCase());
     });
     $("#searchInput").on('keyup', function(e) {
       if (e.keyCode == 13) {
-        loadContent();
+        loadContent($("#searchInput").val().toLowerCase());
       }
     });
+    $("#title").click(function() {
+      loadContent("home");
+    });
 
-    function loadContent() {
-      var searchText = $("#searchInput").val().toLowerCase();
-      if (searchText == "projects" || searchText == "home") {
-        $('body').load('/background_process_test', {"searchText": searchText});
+    function loadContent(sText) {
+      if (sText == "projects" || sText == "home") {
+        $('body').load('/background_process', {"searchText": sText});
+        setTimeout(function(){
+          $(location).attr('href', window.location.origin);
+        }, 400);
       }
     }
   });
