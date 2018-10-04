@@ -24,16 +24,17 @@ conn.close()
 
 @app.route('/')
 def home():
-    if 'curPage' in session:
-        if session['curPage'] == 'home':
-            return render_template('homeText.html')
-        else:
-            return pageHandler(session['curPage'])
-    else:
-        session['curPage'] = "home"
-        return render_template('homeText.html')
+    return render_template('layoutBox.html')
 
-@app.route('/projects')
+@app.route('/', methods=['POST'])
+def process():
+    hashID = request.form['hashID']
+    print(hashID)
+    if (hashID == "projects"):
+        return projects()
+    elif (hashID == "home"):
+        return defaultCont()
+
 def projects():
    con = sqlite3.connect("../ZachSiteDB.db")
    con.row_factory = sqlite3.Row
@@ -44,24 +45,9 @@ def projects():
    rows = cur.fetchall();
    return render_template("projects.html",rows = rows)
 
-@app.route('/background_process', methods=['POST'])
-def background_process():
-    testString = request.form['searchText']
-    print(testString)
-    if (testString == 'projects'):
-        session['curPage'] = "projects"
-        return projects()
-    elif (testString == 'home'):
-        session['curPage'] = "home"
-        return home()
-    else:
-        return 'nothing'
-
-def pageHandler(curPage):
-    if curPage == "projects":
-        return projects()
-    else:
-        return 'nothing'
+@app.route('/default')
+def defaultCont():
+    return render_template('contentDefault.html')
 
 if __name__ == '__main__':
     app.secret_key = 'oihg49whg7hw4gi'
