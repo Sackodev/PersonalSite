@@ -32,6 +32,8 @@ def process():
     print(hashID)
     if (hashID == "projects"):
         return projects()
+    elif (hashID == "resume"):
+        return resume()
     elif (hashID == "home"):
         return defaultCont()
 
@@ -44,6 +46,9 @@ def projects():
 
    rows = cur.fetchall();
    return render_template("projects.html",rows = rows)
+
+def resume():
+    return render_template("resume.html")
 
 @app.route('/default')
 def defaultCont():

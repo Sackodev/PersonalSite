@@ -228,8 +228,8 @@ body {
 .projInfo {
     padding-left: 30px;
 }
-#projContent {
-    text-align: center;
+#contentProject {
+    max-width: 1600px;
 }
 #projListCont h3{
     text-align: center;
@@ -256,3 +256,49 @@ a:hover {
     font-size: 12px;
     margin-top: 3px;
 }
+
+#pageHead h1 {
+    font-size: 40px;
+    font-weight: normal;
+}
+#pageHead {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.homeText .important{
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.resumeBox{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 50px 50px 50px;
+}
+.resumeBox p {
+  margin-bottom: 0.1in;
+  direction: ltr;
+  line-height: 115%;
+  text-align: left;
+  }
+  .resumeBox .name{
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .resumeBox h2{
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-top: 12px;
+    padding-bottom: 15px;
+  }
+  .resumeBox .expHead{
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .resumeBox .expSub{
+    text-transform: uppercase;
+    line-height: 25px;
+  }

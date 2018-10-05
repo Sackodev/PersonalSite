@@ -1,15 +1,17 @@
 {% extends "contentLayout.html" %}
 {% block content %}
-
-    <div id="projContent">
-            <div class="row">
+  <div class="row">
+      <div id="pageHead" class="col-xs-12">
+      <h1>PROJECTS</h1>
+    </div>
+  </div>
+    <div id="projContent" class="row">
                 <div class="col-sm-12 blah">
-                    <div id="projListCont" class="cornerBox">
+                    <div id="contentProject" class="cornerBox">
                         <div class="top left"></div>
 			            <div class="top right"></div>
 			            <div class="bottom left"></div>
 			            <div class="bottom right"></div>
-                        <h3>PROJECTS</h3>
                         <table id="projList">
                         <tbody>
                             {% for row in rows %}
@@ -28,6 +30,5 @@
                         </table>
                     </div>
                 </div>
-            </div>
         </div>
 {% endblock %}
