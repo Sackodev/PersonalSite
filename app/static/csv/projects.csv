@@ -1,2 +1,3 @@
-"Personal Site","This website! My first experience in using Flask.","https://github.com/Wocuangle/PersonalSite",""
-"File Dupe Remover","A program that detects duplicates in a folder. It uses MD5 hashes as well as file sizes to detect the duplicates. Any files you choose to delete are saved in a backup folder so you don't have to worry!","https://github.com/Wocuangle/FileDupeRemover",""
+"Personal Site","This website! My first experience in using Flask.","https://github.com/Wocuangle/PersonalSite","",""
+"File Dupe Remover","A program that detects duplicates in a folder. It uses MD5 hashes as well as file sizes to detect the duplicates. Any files you choose to delete are saved in a backup folder so you don't have to worry!","https://github.com/Wocuangle/FileDupeRemover","FileDupeRemover.png","FileDupeRemoverEdit.png"
+"Brooklyn Bagels","My first completed website! I made it during my internship in 2015 for a small business in my home town. I created an editor that allows the company owner to change the site's text and images in PHP.","http://brooklynsb.com","BrooklynsB.png","BrooklynsBEdit.png"

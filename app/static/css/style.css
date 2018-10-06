@@ -1,25 +1,31 @@
 @font-face {
-    font-family: 'Peepo';
-    src: url('Peepo.woff');
+  font-family: 'Peepo';
+  src: url('Peepo.woff');
 }
+
 /* Extra small devices */
 @media (max-width: 767px) {
-    .contentImg {
-        margin-bottom: 25px;
-    }
-    .picBox {
-      padding-right: 0px;
-    }
-    .projItem div{
-        font-size: 12px;
-    }
-    .projItem h4{
-        font-size: 18px;
-    }
-    #projListCont {
-        padding: 15px;
-    }
+  .contentImg {
+    margin-bottom: 25px;
+  }
+
+  .picBox {
+    padding-right: 0px;
+  }
+
+  .projItem div {
+    font-size: 12px;
+  }
+
+  .projItem h4 {
+    font-size: 18px;
+  }
+
+  #projListCont {
+    padding: 15px;
+  }
 }
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
   .picBox {
@@ -32,20 +38,23 @@
   .picBox {
     padding-right: 15px;
   }
-  #projListCont{
+
+  #projListCont {
     min-width: 900px;
   }
 }
 
 /* Large devices (large desktops, 1600px and up) */
 @media (min-width: 1600px) {
-  .container{
+  .container {
     max-width: 1600px;
   }
+
   .picBox {
     padding-right: 15px;
   }
-  #projListCont{
+
+  #projListCont {
     min-width: 900px;
   }
 }
@@ -55,18 +64,20 @@ html {
   /* forces height to be at least as big as the viewport*/
   min-height: 100%;
 }
+
 * {
   background-color: transparent;
   color: #00ff00;
   font-family: 'Peepo';
 }
+
 body {
   font-family: 'Peepo';
   height: 100%;
   background: black;
 }
-.wrapper{
-}
+
+.wrapper {}
 
 #scanlineGraphic {
   position: absolute;
@@ -83,62 +94,71 @@ body {
   overflow: hidden;
 }
 
-#content{
-}
+#content {}
+
 #searchForm {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   position: relative;
 }
-#searchForm span{
+
+#searchForm span {
   border: 1px solid #00ff00;
 }
+
 #searchInput {
   border: 0px;
   padding-left: 5px;
   width: 170px;
 }
-#searchButton{
+
+#searchButton {
   border: 1px solid #00ff00;
 }
-.container {
 
-}
-.row {
-}
+.container {}
+
+.row {}
+
 /*
 *[class^='col-']{
 }
 */
 .sizepic {
-  max-width:100%;
+  max-width: 100%;
   border: 2px solid #00ff00;
 }
+
 .picBox {
   padding-left: 0px;
 }
+
 #footer {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 #titleBox {
   padding-top: 30px;
-  padding-bottom: 23px;
-  font-weight: bold;
+  padding-bottom: 20px;
+  font-weight: normal;
   font-family: 'Peepo';
   text-align: center;
-  line-height: 45px;
+  line-height: 24px;
   background-color: transparent !important;
 }
+
 #titleText {
   background-color: transparent !important;
-  font-size: 50px;
+  font-size: 58px;
 }
-#titleText span{
+
+#titleText span {
   font-size: 20px;
   font-weight: normal;
 }
+
 .cornerBox {
   position: relative;
   border-left: 2px solid #00ff00;
@@ -147,6 +167,7 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
 .top, .bottom {
   position: absolute;
   width: 20px;
@@ -154,6 +175,7 @@ body {
   pointer-events: none;
   background-color: transparent !important;
 }
+
 .top {
   top: 0;
   border-top: 2px solid #00ff00;
@@ -181,12 +203,12 @@ body {
 }
 
 #searchBox {
-    padding-left: 8px;
+  padding-left: 8px;
 }
 
 .row {
-    margin-left: 15px;
-    margin-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 #socMedia {
@@ -201,104 +223,129 @@ body {
   margin-right: 8px;
 }
 
-.socIcon img{
+.socIcon img {
   width: 48px;
 }
 
 #projListCont {
-    max-width: 1600px;
-    display: inline-block;
-    margin: 0px auto 10px auto;
-    text-align: left;
+  max-width: 1600px;
+  display: inline-block;
+  margin: 0px auto 10px auto;
+  text-align: left;
 }
 
 #projList {
-    margin: 0 auto;
-    display: inline-block;
+  margin: 0 auto;
+  display: inline-block;
 }
+
 .projItem {
-    display: block;
-    margin: 0px 0px 15px 0px;
+  display: block;
+  margin: 0px 0px 15px 0px;
 }
+
 .projImg {
-    height: 150px;
-    width: 150px;
-    border: 2px solid #00ff00;
+  max-width: 175px;
+  /*border: 2px solid #00ff00;*/
 }
+
+.noProjImg {
+  width: 175px;
+  height: 175px;
+  font-size: 30px;
+  line-height: 175px;
+  text-align: center;
+}
+
 .projInfo {
-    padding-left: 30px;
+  padding-left: 30px;
 }
+
 #contentProject {
-    max-width: 1600px;
+  max-width: 1600px;
 }
-#projListCont h3{
-    text-align: center;
-    margin-bottom: 20px;
+
+#projListCont h3 {
+  text-align: center;
+  margin-bottom: 20px;
 }
-#projListCont h4{
-    margin-bottom: 5px;
+
+#projListCont h4 {
+  margin-bottom: 5px;
 }
+
 a {
-    margin: 0 auto;
-    color: #00ff00;
+  margin: 0 auto;
+  color: #00ff00;
 }
+
 a:hover {
-    color: #00ff00;
+  color: #00ff00;
 }
+
 .projInfo .link {
-    margin-top: 10px;
+  margin-top: 10px;
 }
+
 #titleText a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #searchHint {
-    font-size: 12px;
-    margin-top: 3px;
+  font-size: 12px;
+  margin-top: 3px;
 }
 
 #pageHead h1 {
-    font-size: 40px;
-    font-weight: normal;
+  font-size: 42px;
+  font-weight: normal;
 }
+
 #pageHead {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 
-.homeText .important{
+.homeText .important {
   font-size: 20px;
   text-transform: uppercase;
 }
 
-.resumeBox{
+/* Projects Page */
+/* Resume Page */
+.resumeBox {
   max-width: 1000px;
   margin: 0 auto;
   padding: 50px 50px 50px 50px;
 }
+
 .resumeBox p {
   margin-bottom: 0.1in;
   direction: ltr;
   line-height: 115%;
   text-align: left;
-  }
-  .resumeBox .name{
-    text-transform: uppercase;
-    font-size: 30px;
-  }
-  .resumeBox h2{
-    font-size: 22px;
-    text-transform: uppercase;
-    padding-top: 12px;
-    padding-bottom: 15px;
-  }
-  .resumeBox .expHead{
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 25px;
-  }
-  .resumeBox .expSub{
-    text-transform: uppercase;
-    line-height: 25px;
-  }
+}
+
+.resumeBox .name {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.resumeBox h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-top: 12px;
+  padding-bottom: 15px;
+}
+
+.resumeBox .expHead {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.resumeBox .expSub {
+  text-transform: uppercase;
+  line-height: 25px;
+}
