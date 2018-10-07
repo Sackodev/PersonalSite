@@ -5,25 +5,24 @@
         <h1>PROJECTS</h1>
     </div>
 </div>
-<div id="projContent" class="row">
-    <div class="col-sm-12 blah">
-        <div id="contentProject" class="cornerBox">
-            <div class="top left"></div>
-            <div class="top right"></div>
-            <div class="bottom left"></div>
-            <div class="bottom right"></div>
-            <table id="projList">
-                <tbody>
-                    {% for row in rows %}
-                    <tr class="projItem">
-                        <td>
-                            {% if row['img'] == "" %}
-                            <div class="noProjImg">NO IMAGE</img>
-                                {% else %}
-                                <a href="/static/img/{{row['img']}}"><img src="/static/img/{{row['editimg']}}" class="projImg"></a></img>
-                                {% endif %}
-                        </td>
-                        <td class="projInfo">
-                            <h4 class="projName">{{row["projname"]}}</h4>
-                            <div class="desc">{{row["desc"]}}</div>
-                            <div class="link"><a href="{{row['link']}}">--> Project Link <--</a> </div> </td> </tr> {% endfor %} </tbody> </table> </div> </div> </div> {% endblock %}
+<div id="contentProjects" class="row">
+    <div class="col-sm-12 cornerBox">
+        <div class="top left"></div>
+        <div class="top right"></div>
+        <div class="bottom left"></div>
+        <div class="bottom right"></div>
+        <table id="projList">
+            <tbody>
+                {% for row in rows %}
+                <tr class="projItem">
+                    <td class="imgCol">
+                        {% if row['img'] == "" %}
+                        <div class="noProjImg">NO IMAGE</img>
+                            {% else %}
+                            <a href="/static/img/{{row['img']}}"><img src="/static/img/{{row['editimg']}}" class="projImg"></a></img>
+                            {% endif %}
+                    </td>
+                    <td class="projInfo">
+                        <h4>{{row["projname"]}}</h4>
+                        <div class="desc">{{row["desc"]}}</div>
+                        <div class="link"><a href="{{row['link']}}">--> Project Link <--</a> </div> </td> </tr> {% endfor %} </tbody> </table> </div> </div> {% endblock %}

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!--Bootstrap stuff -->
     <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">-->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -15,14 +18,12 @@
 <body>
     <div class="wrapper">
         <div id="scanlineGraphic"></div>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
                     <div id="titleBox">
-                        <div id="titleText">
-                            <a href="#home" id="title">Zach Adkins</a><br>
-                            <span>Aspiring programmer</span>
-                        </div>
+                        <h1><a href="#home">Zach Adkins</a></h1>
+                        <h2>Aspiring programmer</h2>
                     </div>
                 </div>
             </div>
@@ -33,6 +34,13 @@
                         <button id="searchButton" type="button">Submit</button>
                         <div id="searchHint">Hint: Type '<a href="#home">home</a>', '<a href="#projects">projects</a>', or '<a href="#resume">resume</a>' in above search box</div>
                     </div>
+                </div>
+            </div>
+            <div id="navbar" class="row">
+                <div class="col-xs-12">
+                    <div class="navItem"><a href="#home">>HOME</a></div>
+                    <div class="navItem"><a href="#projects">>PROJECTS</a></div>
+                    <div class="navItem"><a href="#resume">>RESUME</a></div>
                 </div>
             </div>
             {% block content %}

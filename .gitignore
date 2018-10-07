@@ -3,3 +3,5 @@ include/
 lib/
 ZachSite/
 pip-selfcheck.json
+app.zip
+backup/
