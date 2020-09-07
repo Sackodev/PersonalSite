@@ -6,15 +6,15 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zach Adkins' Portfolio Site</title>
-    <meta name="description" content="Zach Adkins is a programmer in Dallas, TX looking for freelance work or hire. He has a Bachelor's in Computer Info Systems, and some experience in Flask and PHP web development." />
+    <meta name="description" content="Zach Adkins is a programmer in Dallas, TX looking for freelance work or hire. He has a Bachelor's in Computer Info Systems, and some experience in Python and  web development." />
     <!--Bootstrap stuff -->
     <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">-->
 
     <meta property="og:url" content="http://sackodev.ga" />
     <meta property="og:site_name" content="Zach Adkins' Portfolio Site" />
     <meta property="og:title" content="Sackodev.ga" />
-    <meta property="og:keywords" content="Zach Adkins, Programmer, Web dev, Flask, Python, Java, Dallas, Richardson, Plano, Texas" />
-    <meta property="og:description" content="Zach Adkins is a programmer in Dallas, TX looking for freelance work or hire. He has a Bachelor's in Computer Info Systems, and some experience in Flask and PHP web development." />
+    <meta property="og:keywords" content="Zach Adkins, Programmer, Web dev, Flask, Python, Java, Muskegon, Michigan" />
+    <meta property="og:description" content="Zach Adkins is a programmer in Muskegon, MI looking for freelance work or hire. He has a Bachelor's in Computer Info Systems, and some experience in Flask and PHP web development." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="http://sackodev.ga/static/img/code-pic.png" />
 
@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col-sm-12" id="footer">
                     Created by Zach Adkins<br>
-                    Contact at zachadkins@workmail.com
+                    Contact at wocuangle@gmail.com
                 </div>
             </div>
         </div>

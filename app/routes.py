@@ -1,13 +1,23 @@
+
 from flask import Flask, render_template, request, session
-import sqlite3
-import csv
+import sqlite3, csv, random
 
 app = Flask(__name__)
+
+word_file = open("static/txt/corncob_lowercase.txt")
+
+word_list = []
+
+for line in word_file:
+    line = line.strip()
+    word_list.append(line)
+
+word_file.close()
 
 conn = sqlite3.connect('../ZachSiteDB.db')
 conn.execute('''CREATE TABLE if not exists projects (projid INTEGER PRIMARY KEY, projname TEXT NOT NULL, desc TEXT NOT NULL, link TEXT NOT NULL, img TEXT, editimg TEXT);''')
 
-with open('app/static/csv/projects.csv') as csvfile:
+with open('static/csv/projects.csv') as csvfile:
     curs = conn.cursor()
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     for csvrow in reader:
@@ -42,6 +52,8 @@ def process():
         return projects()
     elif (hashID == "resume"):
         return resume()
+    elif (hashID == "randwords"):
+        return randwords()
     elif (hashID == "home"):
         return defaultCont()
 
@@ -51,7 +63,7 @@ def projects():
     con.row_factory = sqlite3.Row
 
     cur = con.cursor()
-    cur.execute("SELECT * FROM projects")
+    cur.execute("SELECT * FROM projects ORDER BY projname")
 
     rows = cur.fetchall()
     return render_template("projects.html", rows=rows)
@@ -60,12 +72,30 @@ def projects():
 def resume():
     return render_template("resume.html")
 
+def randwords():
+    print("hello!")
+    phrase_length = 3
+
+    phrase = []
+
+    word_nums = []
+    for i in range(phrase_length):
+        while(True):
+            num_tmp = random.randint(0, len(word_list) - 1)
+            if num_tmp not in word_nums:
+                word_nums.append(num_tmp)
+                break
+
+    for num in word_nums:
+        phrase.append(word_list[num])
+    
+    print(phrase)
+    return render_template("randwords.html", words=phrase)
 
 @app.route('/default')
 def defaultCont():
     return render_template('contentDefault.html')
 
-
 if __name__ == '__main__':
     app.secret_key = 'oihg49whg7hw4gi'
-    app.run(debug=True)
+    app.run(host='0.0.0.0')

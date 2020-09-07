@@ -102,9 +102,9 @@
 
 #navbar .navItem {
   display: inline-block;
-  padding-right: 7px;
-  padding-left: 7px;
-  font-size: 22px;
+  padding-right: 6px;
+  padding-left: 6px;
+  font-size: 20px;
 }
 
 .navItem a:hover {
@@ -344,6 +344,13 @@ a:hover {
 }
 
 /* ---xResume Page--- */
+.expDetails{
+	margin-left: 25px;
+	margin-bottom: 18px;
+}
+.expDetails:last-child{
+	margin-bottom: 12px;
+}
 .resumeBox {
   max-width: 1000px;
   margin: 0 auto;
@@ -353,7 +360,7 @@ a:hover {
 .resumeBox p {
   margin-bottom: 0.1in;
   direction: ltr;
-  line-height: 115%;
+  line-height: 125%;
   text-align: left;
 }
 
@@ -384,6 +391,26 @@ a:hover {
   max-width: 400px;
   margin: 0 auto;
   margin-bottom: 25px;
+}
+
+.resumeBox ul {
+  padding-left: 25px;
+}
+.resumeBox ul li {
+  list-style-type: none;
+}
+.resumeBox ul li p:before{
+  content: "> ";
+}
+
+/* xRandwords Page */
+#contentRandwords {
+  max-width: 1600px;
+  text-align: center;
+}
+.word{
+  font-size: 30px;
+
 }
 
 /* Small devices (tablets, 768px and up) */

@@ -1,0 +1,22 @@
+{% extends "contentLayout.html" %}
+{% block content %}
+<div class="row">
+    <div id="pageHead" class="col-xs-12">
+        <h1>RANDOM WORDS</h1>
+    </div>
+</div>
+<div id="contentRandwords" class="row">
+    <div class="col-sm-12 cornerBox" style="text-align:center;">
+        <div class="top left"></div>
+        <div class="top right"></div>
+        <div class="bottom left"></div>
+        <div class="bottom right"></div>
+
+        {% for word in words %}
+        <div class="word" style="display:inline-block;">{{ word }}</div><br>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
