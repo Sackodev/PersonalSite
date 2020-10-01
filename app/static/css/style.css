@@ -242,6 +242,16 @@ a:hover {
   margin-bottom: 25px;
 }
 
+/* xGame Page */
+#contentGame {
+  max-width: 1600px;
+}
+#contentGame iframe{
+  display: inline-block;
+  margin: auto;
+  border: 0px;
+}
+
 /* ---xProjects Page--- */
 #projListCont {
   max-width: 1600px;

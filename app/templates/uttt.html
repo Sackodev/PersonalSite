@@ -1,0 +1,31 @@
+{% extends "contentLayout.html" %}
+{% block content %}
+<div class="row">
+    <div id="pageHead" class="col-xs-12">
+        <h1>ULTIMATE TIC TAC TOE</h1>
+    </div>
+</div>
+<div id="contentUTTT" class="row">
+    <div class="col-sm-12 cornerBox" style="text-align:center;">
+        <div class="top left"></div>
+        <div class="top right"></div>
+        <div class="bottom left"></div>
+        <div class="bottom right"></div>
+
+        <div id="uttt_game" class="uttt_window" style="display:inline-block;width:700px;height:700px;">
+        </div>
+        hello!
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#uttt_game').text = "<div class='butt'>Hello!</div>";
+
+
+
+
+    });
+</script>
+{% endblock %}

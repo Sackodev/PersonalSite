@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     const SEARCH_INPUT_ID = "#searchInput";
 
-    var pages = ["home", "projects", "resume", "randwords"];
+    var pages = ["home", "projects", "resume", "randwords", "uttt", "game"];
 
     console.log(pages);
 

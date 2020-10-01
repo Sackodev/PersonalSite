@@ -54,8 +54,16 @@ def process():
         return resume()
     elif (hashID == "randwords"):
         return randwords()
+    elif (hashID == "uttt"):
+        return uttt()
+    elif (hashID) == "game":
+        return game()
     elif (hashID == "home"):
         return defaultCont()
+    elif (hashID == "uttt"):
+        return uttt()
+    else:
+        return home()
 
 
 def projects():
@@ -73,7 +81,6 @@ def resume():
     return render_template("resume.html")
 
 def randwords():
-    print("hello!")
     phrase_length = 3
 
     phrase = []
@@ -89,8 +96,13 @@ def randwords():
     for num in word_nums:
         phrase.append(word_list[num])
     
-    print(phrase)
     return render_template("randwords.html", words=phrase)
+
+def uttt():
+    return render_template("uttt.html")
+
+def game():
+    return render_template("game.html")
 
 @app.route('/default')
 def defaultCont():
